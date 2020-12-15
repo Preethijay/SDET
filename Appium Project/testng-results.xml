@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-12-15T11:57:03 IST" name="Suite" finished-at="2020-12-15T11:58:58 IST" duration-ms="114895">
+    <groups>
+    </groups>
+    <test started-at="2020-12-15T11:57:03 IST" name="Test" finished-at="2020-12-15T11:58:58 IST" duration-ms="114895">
+      <class name="Appium.Appium_Activity2_3">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Appium.Appium_Activity2_3@483f6d77]" started-at="2020-12-15T11:58:15 IST" name="beforeClass" finished-at="2020-12-15T11:58:25 IST" duration-ms="10006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="Login_Popups()[pri:0, instance:Appium.Appium_Activity2_3@483f6d77]" started-at="2020-12-15T11:58:25 IST" name="Login_Popups" finished-at="2020-12-15T11:58:57 IST" duration-ms="31668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_Popups -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Appium.Appium_Activity2_3@483f6d77]" started-at="2020-12-15T11:58:57 IST" name="afterClass" finished-at="2020-12-15T11:58:58 IST" duration-ms="763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Appium.Appium_Activity2_3 -->
+      <class name="Appium.Appium_Activity2_2">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Appium.Appium_Activity2_2@5403f35f]" started-at="2020-12-15T11:57:40 IST" name="beforeClass" finished-at="2020-12-15T11:57:50 IST" duration-ms="10229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="Login()[pri:0, instance:Appium.Appium_Activity2_2@5403f35f]" started-at="2020-12-15T11:57:50 IST" name="Login" finished-at="2020-12-15T11:58:14 IST" duration-ms="24270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Appium.Appium_Activity2_2@5403f35f]" started-at="2020-12-15T11:58:14 IST" name="afterClass" finished-at="2020-12-15T11:58:15 IST" duration-ms="648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Appium.Appium_Activity2_2 -->
+      <class name="Appium.Appium_Activity2_1">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Appium.Appium_Activity2_1@429bffaa]" started-at="2020-12-15T11:57:03 IST" name="beforeClass" finished-at="2020-12-15T11:57:14 IST" duration-ms="10982" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="addTask1()[pri:0, instance:Appium.Appium_Activity2_1@429bffaa]" started-at="2020-12-15T11:57:14 IST" name="addTask1" finished-at="2020-12-15T11:57:40 IST" duration-ms="26275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTask1 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Appium.Appium_Activity2_1@429bffaa]" started-at="2020-12-15T11:57:40 IST" name="afterClass" finished-at="2020-12-15T11:57:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Appium.Appium_Activity2_1 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
