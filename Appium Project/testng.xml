@@ -3,10 +3,10 @@
 <suite parallel="false" name="Suite">
   <test name="Test">
     <classes>
- 
-      <class name="Appium.Appium_Activity2_1"/>
-      <class name="Appium.Appium_Activity2_2"/>
-      <class name="Appium.Appium_Activity2_3"/>
+    <class name="Appium.Appium_GoogleKeep1"/>
+      <class name="Appium.Appium_GoogleTask"/>
+      <class name="Appium.GoogleKeep2"/>
+     
       </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

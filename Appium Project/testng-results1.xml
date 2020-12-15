@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-12-15T12:04:41 IST" name="Suite" finished-at="2020-12-15T12:06:06 IST" duration-ms="84690">
+    <groups>
+    </groups>
+    <test started-at="2020-12-15T12:04:41 IST" name="Test" finished-at="2020-12-15T12:06:06 IST" duration-ms="84690">
+      <class name="Appium.Appium_GoogleTask">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Appium.Appium_GoogleTask@483f6d77]" started-at="2020-12-15T12:05:11 IST" name="beforeClass" finished-at="2020-12-15T12:05:22 IST" duration-ms="10990" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="addTask1()[pri:0, instance:Appium.Appium_GoogleTask@483f6d77]" started-at="2020-12-15T12:05:22 IST" name="addTask1" finished-at="2020-12-15T12:05:26 IST" duration-ms="4579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTask1 -->
+        <test-method signature="addTask2()[pri:0, instance:Appium.Appium_GoogleTask@483f6d77]" started-at="2020-12-15T12:05:26 IST" name="addTask2" finished-at="2020-12-15T12:05:31 IST" duration-ms="4637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTask2 -->
+        <test-method signature="addTask3()[pri:0, instance:Appium.Appium_GoogleTask@483f6d77]" started-at="2020-12-15T12:05:31 IST" name="addTask3" finished-at="2020-12-15T12:05:35 IST" duration-ms="4385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTask3 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Appium.Appium_GoogleTask@483f6d77]" started-at="2020-12-15T12:05:35 IST" name="afterClass" finished-at="2020-12-15T12:05:35 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Appium.Appium_GoogleTask -->
+      <class name="Appium.Appium_GoogleKeep1">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Appium.Appium_GoogleKeep1@5403f35f]" started-at="2020-12-15T12:04:41 IST" name="beforeClass" finished-at="2020-12-15T12:04:55 IST" duration-ms="14237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="gKeep()[pri:0, instance:Appium.Appium_GoogleKeep1@5403f35f]" started-at="2020-12-15T12:04:55 IST" name="gKeep" finished-at="2020-12-15T12:05:10 IST" duration-ms="14673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gKeep -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Appium.Appium_GoogleKeep1@5403f35f]" started-at="2020-12-15T12:05:10 IST" name="afterClass" finished-at="2020-12-15T12:05:11 IST" duration-ms="774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Appium.Appium_GoogleKeep1 -->
+      <class name="Appium.GoogleKeep2">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Appium.GoogleKeep2@7e5afaa6]" started-at="2020-12-15T12:05:35 IST" name="beforeClass" finished-at="2020-12-15T12:05:47 IST" duration-ms="11935" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="reminder()[pri:0, instance:Appium.GoogleKeep2@7e5afaa6]" started-at="2020-12-15T12:05:47 IST" name="reminder" finished-at="2020-12-15T12:06:05 IST" duration-ms="18410" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reminder -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Appium.GoogleKeep2@7e5afaa6]" started-at="2020-12-15T12:06:06 IST" name="afterClass" finished-at="2020-12-15T12:06:06 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Appium.GoogleKeep2 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
