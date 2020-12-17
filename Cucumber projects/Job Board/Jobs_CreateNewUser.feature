@@ -1,4 +1,4 @@
-@JobsCreateNewUser
+@SuiteJob
 Feature: Create a new user
 
 Scenario: Visit the site backend and create a new user
