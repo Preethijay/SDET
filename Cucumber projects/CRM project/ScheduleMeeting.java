@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -17,120 +18,105 @@ public class ScheduleMeeting {
     WebDriverWait wait;
     
     
-
-    @Given("^The user is at welcome page$")
-
-    public void Welcome() {
-   	  	driver = new FirefoxDriver();
-        wait = new WebDriverWait(driver, 10);
-        driver.get("https://alchemy.hguy.co/crm/index.php?action=Login&module=Users");
-
-    }
+    @Given("^User navigates to Login Page$")
+    public void LoginPage()  {
+     	 //Create a new instance of the Firefox driver
+         driver = new FirefoxDriver();
+         wait = new WebDriverWait(driver, 15);
+                 
+         //Open the browser
+         driver.get("https://alchemy.hguy.co/crm/");
+  
+ 	}
     
-    @And("^User enters details Username and Password$")
-    public void Admin_user_login_and() throws Throwable {
- 	   	driver.findElement(By.id("user_name")).sendKeys("admin");
-	    driver.findElement(By.id("username_password")).sendKeys("pa$$w0rd");
-	    driver.findElement(By.id("bigbutton")).click();
+    @When("^User Enters the \"(.*)\" and \"(.*)\"$")
+   	public void userValues(String username, String password) throws Throwable {
+       	//Enter username from Feature file
+       	driver.findElement(By.id("user_name")).sendKeys(username);
+       	//Enter password from Feature file
+       	driver.findElement(By.id("username_password")).sendKeys(password);
+       	//Click Login
+       	driver.findElement(By.id("bigbutton")).click();
 
-	    }
+       } 
     
-    @When ("^User navigates to Activities option$")
-    public void ClickActivities() {
+    @And("^Navigate to Activites and click on Meetings$")
+    public void clickMeeting()  {
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("tab-actions")));
+    	//Navigate to Meeting
+        driver.findElement(By.id("grouptab_3")).click();
+        
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("moduleTab_9_Meetings")));
+       WebElement link= driver.findElement(By.xpath("//*[@id = 'moduleTab_9_Meetings']")); 
+       link.click();
+     
+}
+    
+  
+    @And("^Click on Schedule meeting$")
+    public void scheduleMeeting()  {
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("module-title-text")));
+       
+    	//Navigate to Schedule Meeting
+        driver.findElement(By.linkText("Schedule Meeting")).click();   
+      
+           
+}
+    
+    
+    @And("^Add \"(.*)\" and \"(.*)\" to meeting$")
+    public void addinvite(String FirstMember , String LastMember) throws Throwable  {
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("invitees_search")));
     	
-    	//Activities tab
-   			WebElement ActivitiesTab = driver.findElement(By.xpath("//*[@id='grouptab_3']"));
-   			wait.until(ExpectedConditions.elementToBeClickable(ActivitiesTab));
-    			//click on activities tab
-
-    		//	ActivitiesTab.click();
-    }
-    
-    @And ("^Select the Meeting option")
-
-    public void ClickMeeting() throws InterruptedException {
-    	Thread.sleep(1000);
-    WebElement Meetingoption= driver.findElement(By.xpath("//*[@id='moduleTab_9_Meetings']"));
-   
- //  WebElement Meetingoption= driver.findElement(By.id("moduleTab_Meetings']"));
-   
-     	
-    Meetingoption.click();
-   	Meetingoption.click();
-		Thread.sleep(5000);
-		
-		/html/body/div[3]/div/div/div[1]/ul/li[1]/a/div[1]/span
-
-    }
-    
-    @And ("^Clicks on Schedule a Meeting option$")
-    public void ClickScheduleMeeting()  throws InterruptedException {
-    	driver.findElement(By.linkText("Schedule Meeting")).click();
-    	Thread.sleep(5000);
-
-    }
-    
-    @And ("^User first enters the\"(.*)\"and add to meeting$")
-
-    public void AddFirstinvitee (String FirstName) throws Throwable {
- 	   	WebElement FirstInvitee = driver.findElement(By.id("search_first_name"));
-    	FirstInvitee.sendKeys(FirstName);
-    	Thread.sleep(3000);
+        //Add invitees
+    	WebElement invitee1 = driver.findElement(By.id("search_first_name"));
+    	invitee1.sendKeys(FirstMember);
     	driver.findElement(By.id("invitees_search")).click();
     	Thread.sleep(3000);
     	driver.findElement(By.id("invitees_add_1")).click();
-    	    }
-    
-    @And ("^User second enters the\"(.*)\"and add to meeting$")
-
-    public void AddSecondinvitee(String SecondName) throws Throwable {
-    	WebElement SecondInvitee = driver.findElement(By.id("search_first_name"));
-    	SecondInvitee.clear();
-    	SecondInvitee.sendKeys(SecondName);
-      	driver.findElement(By.id("invitees_search")).click();
-    	Thread.sleep(3000);
-    	driver.findElement(By.id("invitees_add_1")).click();
-    }
-    
-    @And ("^User third enters the\"(.*)\"and add to meeting$")
-
-    public void AddThirdinvitee(String ThirdName) throws Throwable {
-    	WebElement ThirdInvitee = driver.findElement(By.id("search_first_name"));
-    	ThirdInvitee.clear();
-    	ThirdInvitee.sendKeys(ThirdName);
+    	invitee1.clear();
+    	
+    	WebElement invitee2 = driver.findElement(By.id("search_first_name"));
+    	invitee2.sendKeys(LastMember);
     	driver.findElement(By.id("invitees_search")).click();
     	Thread.sleep(3000);
     	driver.findElement(By.id("invitees_add_1")).click();
-
+  
+}
+    
+    @And("^Enter meeting details and click save$")
+    public void details()  {
+     
+    	//Enter Meeting details
+    	driver.findElement(By.id("name")).sendKeys("Overview Meeting");
+    	driver.findElement(By.id("description")).sendKeys("Test Meeting");
+        driver.findElement(By.id("SAVE_HEADER")).click();
+           
+}
+    
+  
+    @Then("^Navigate to View Meetings page and Verify creation of meeting$")
+    public void creation()  {
+  	  
+    wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("module-title-text")));
+    driver.findElement(By.linkText("View Meetings")).click();
+  	 
+  	wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("module-title-text")));
+  	WebElement data = driver.findElement(By.linkText("Overview Meeting"));
+  	String text = data.getText();
+  	System.out.println("Meetings heading is :" + text);
+  	  
+  	Assert.assertEquals(text, "Overview Meeting");
+  	
     }
     
-    @Then ("^Navigates to the View Meetings Page$")
-    public void ClickViewMeeting() throws InterruptedException {
-    	driver.findElement(By.linkText("View Meetings")).click();
-      Thread.sleep(3000);
-
-    }
+  
     
-    @And ("^confirm the meeting")
-    public void ValidateMeeting()  {
-       	if(driver.findElement(By.linkText("Meeting to Discuss Business")).isDisplayed())
-    	{
-    		System.out.println("The Meeting is scheduled successfully");
-		    	}
-    	
 
-    	else
-    	{
-    		System.out.println("The meeting could not be scheduled");
-    	}
-
-    }
-    
-    @And ("^Close$")
-
+  	@And("^Browser Closes$")
     public void closebrowser() {
-    	driver.close();
-
+  		
+        //driver.close();
     }
     
 }
